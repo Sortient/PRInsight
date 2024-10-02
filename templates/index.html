@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review Feedback Generator</title>
+</head>
+<body>
+    <h1>Code Review Feedback Generator</h1>
+
+    <form method="POST">
+        <label for="comment">Enter the comment to analyze:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="seniority_level">Select the seniority level:</label><br>
+        <select id="seniority_level" name="seniority_level">
+            <option value="1">Senior to Junior</option>
+            <option value="2">Senior to Senior</option>
+            <option value="3">Constructive Feedback</option>
+        </select><br><br>
+
+        <input type="submit" value="Generate Feedback">
+    </form>
+
+    {% if feedback %}
+    <h2>Generated Feedback:</h2>
+    <p>{{ feedback }}</p>
+    {% endif %}
+</body>
+</html>
