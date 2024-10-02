@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Review Feedback Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Code Review Feedback Generator</h1>
@@ -15,8 +16,7 @@
         <label for="seniority_level">Select the seniority level:</label><br>
         <select id="seniority_level" name="seniority_level">
             <option value="1">Senior to Junior</option>
-            <option value="2">Senior to Senior</option>
-            <option value="3">Constructive Feedback</option>
+            <option value="2">Peer to Peer</option>
         </select><br><br>
 
         <input type="submit" value="Generate Feedback">
@@ -24,7 +24,7 @@
 
     {% if feedback %}
     <h2>Generated Feedback:</h2>
-    <p>{{ feedback }}</p>
+    <p>{{ feedback|safe}}</p>
     {% endif %}
 </body>
 </html>

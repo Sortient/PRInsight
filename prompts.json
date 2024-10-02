@@ -1,0 +1,6 @@
+{
+    "senior-to-junior": "Rate the following comment from a senior developer to a junior developer on a pull request. Be helpful and understanding, explaining key concepts that may not be obvious to a junior developer.",
+    "peer-to-peer": "Rate the following comment from one senior developer to another senior developer on a pull request. Avoid coming across as condescending, framing it more as a discussion/inquiry rather than an instruction.",
+    "addendum": "Here's the comment: {input_comment} Rate the comment based on the following factors: {factors}. Provide a concise sample improved code review comment, after typing out the original comment verbatim. It should be readable as, for example one of many comments on a BitBucket diff, and not as an email. Do not use exclamation marks.",
+    "factors": "Professionalism and Tone. Constructive nature. Use of code snippets."
+}
